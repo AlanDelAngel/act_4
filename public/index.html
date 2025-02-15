@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Productos</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Gestión de Productos</h1>
+
+    <div id="login-container">
+        <h2>Iniciar Sesión</h2>
+        <input type="email" id="email" placeholder="Correo">
+        <input type="password" id="password" placeholder="Contraseña">
+        <button onclick="login()">Ingresar</button>
+        <p>¿No tienes cuenta? <a href="#" onclick="showRegister()">Regístrate</a></p>
+    </div>
+
+    <div id="register-container" style="display: none;">
+        <h2>Registro</h2>
+        <input type="text" id="username" placeholder="Usuario">
+        <input type="email" id="reg-email" placeholder="Correo">
+        <input type="password" id="reg-password" placeholder="Contraseña">
+        <button onclick="register()">Registrarse</button>
+        <p>¿Ya tienes cuenta? <a href="#" onclick="showLogin()">Iniciar sesión</a></p>
+    </div>
+
+    <div id="product-container" style="display: none;">
+        <h2>Productos</h2>
+        <input type="text" id="product-name" placeholder="Nombre del producto">
+        <input type="number" id="product-price" placeholder="Precio">
+        <input type="text" id="product-description" placeholder="Descripción">
+        <button onclick="addProduct()">Agregar Producto</button>
+
+        <h3>Lista de Productos</h3>
+        <ul id="product-list"></ul>
+        <button onclick="logout()">Cerrar Sesión</button>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
